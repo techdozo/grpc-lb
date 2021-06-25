@@ -1,0 +1,42 @@
+HELP.md
+.gradle
+.class
+/build/
+build
+target/
+out
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+#gradle/
+#gradlew
+#gradlew.bat
+
+
+### VS Code ###
+.vscode/
+
+hs_err_pid*
+
+### Eclipse ###
+/bin

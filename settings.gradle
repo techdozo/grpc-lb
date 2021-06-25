@@ -1,0 +1,3 @@
+include 'product-client-svc'
+include 'product-server-svc'
+

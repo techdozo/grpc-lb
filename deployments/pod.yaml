@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: product-svc
+  labels:
+    app: product
+spec:
+  containers:
+    - name: product
+      imagePullPolicy: IfNotPresent
+      image: techdozo/product-svc:1.0.0
