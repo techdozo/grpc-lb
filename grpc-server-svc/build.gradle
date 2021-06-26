@@ -1,0 +1,48 @@
+plugins {
+    id "org.springframework.boot" version "2.5.2"
+    id "com.google.protobuf" version "0.8.16"
+    id 'java'
+}
+
+group 'dev.techdozo.grpc'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //gRPC dependencies
+    implementation 'net.devh:grpc-server-spring-boot-starter:2.12.0.RELEASE'
+
+    //Logging
+    implementation 'org.apache.logging.log4j:log4j-api:2.13.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.13.3'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.12.4'
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.31.0'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
