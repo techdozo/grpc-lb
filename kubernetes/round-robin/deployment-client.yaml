@@ -19,4 +19,4 @@ spec:
           image: techdozo/grpc-lb-client:1.0.0
           env:
             - name: SERVER_HOST
-              value: "grpc-server-service.default.svc.cluster.local:8001"
+              value: grpc-server-service:8001
